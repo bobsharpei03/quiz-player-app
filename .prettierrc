@@ -2,9 +2,6 @@
     "trailingComma": "none",
     "singleQuote": true,
     "tabWidth": 4,
-    "plugins": [
-        "prettier-plugin-apex"
-    ],
     "overrides": [
         {
             "files": "**/*.html",
