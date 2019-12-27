@@ -22,3 +22,6 @@ declare module "@salesforce/apex/QuizController.getQuizSession" {
 declare module "@salesforce/apex/QuizController.triggerNextPhase" {
   export default function triggerNextPhase(param: {sessionId: any}): Promise<any>;
 }
+declare module "@salesforce/apex/QuizController.resetGame" {
+  export default function resetGame(): Promise<any>;
+}
