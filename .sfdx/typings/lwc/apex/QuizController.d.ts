@@ -25,3 +25,6 @@ declare module "@salesforce/apex/QuizController.triggerNextPhase" {
 declare module "@salesforce/apex/QuizController.resetGame" {
   export default function resetGame(): Promise<any>;
 }
+declare module "@salesforce/apex/QuizController.checkSettings" {
+  export default function checkSettings(): Promise<any>;
+}
