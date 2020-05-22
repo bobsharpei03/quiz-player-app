@@ -10,6 +10,7 @@ else
   exit -1
 fi
 
+# Update node package
 sed -E -i '' -e "s|\"version\": \"[0-9]+\.[0-9]+\.[0-9]+\",|\"version\": \"$version\",|" ../package.json && \
 sed -E -i '' -e "s|PLAYER_APP_VERSION = '[0-9]+\.[0-9]+\.[0-9]+';|PLAYER_APP_VERSION = '$version';|" ../src/client/modules/ui/app/app.js && \
 npm install
