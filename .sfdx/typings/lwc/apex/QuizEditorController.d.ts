@@ -4,6 +4,6 @@ declare module "@salesforce/apex/QuizEditorController.getAllQuestions" {
 declare module "@salesforce/apex/QuizEditorController.setSessionQuestions" {
   export default function setSessionQuestions(param: {sessionId: any, questionIds: any}): Promise<any>;
 }
-declare module "@salesforce/apex/QuizEditorController.getSessionQuestions" {
-  export default function getSessionQuestions(param: {sessionId: any}): Promise<any>;
+declare module "@salesforce/apex/QuizEditorController.getSessionQuestionIds" {
+  export default function getSessionQuestionIds(param: {sessionId: any}): Promise<any>;
 }
