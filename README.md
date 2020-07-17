@@ -28,3 +28,4 @@ COLLECT_PLAYER_EMAILS=false
 ```
 
 Run the project with `npm start`
+s
