@@ -14,7 +14,7 @@
             }
         }
     ],
-    "namespace": "",
+    "namespace": "sfq",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "61.0",
     "packageAliases": {
