@@ -16,7 +16,7 @@
     ],
     "namespace": "sfq",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "61.0",
+    "sourceApiVersion": "60.0",
     "packageAliases": {
         "Quiz": "0HoJ9000000KyjGKAS",
         "Quiz@2.11.0-1": "04tJ9000000Y15cIAC"
