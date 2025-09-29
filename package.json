@@ -5,30 +5,40 @@
     "private": true,
     "author": "pozil",
     "bugs": "https://github.com/developerforce/quiz-player-app/issues",
+    "scripts": {
+        "start": "MODE=prod node src/server/server.js",
+        "dev": "node src/server/server.js",
+        "lint": "eslint ./src/**/*.js",
+        "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
+        "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
+        "preinstall": "rm -fr src/client/assets/dist",
+        "postinstall": "husky install && mkdir -p src/client/assets/dist && cp node_modules/normalize.css/normalize.css src/client/assets/dist/.",
+        "precommit": "lint-staged"
+    },
     "dependencies": {
         "@babel/core": "^7.24.4",
+        "@lwc/eslint-plugin-lwc": "^3.2.0",
+        "@salesforce/eslint-config-lwc": "^4.0.0",
+        "@salesforce/eslint-plugin-lightning": "^2.0.0",
+        "@salesforce/sfdx-lwc-jest": "^7.1.0",
         "dotenv": "^16.4.5",
-        "jsforce": "^1.11.1",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-jest": "^29.0.1",
+        "husky": "^9.1.7",
+        "jsforce": "^3.10.7",
+        "lint-staged": "^16.1.6",
         "lwc": "^6.5.3",
-        "lwr": "^0.12.2",
+        "lwr": "^0.18.3",
         "normalize.css": "^8.0.1",
+        "olly": "^1.0.0",
+        "prettier": "^3.6.2",
+        "prettier-plugin-apex": "^2.2.6",
+        "protobufjs": "^7.5.4",
+        "vm2": "^3.9.19",
         "ws": "^8.16.0"
     },
-    "devDependencies": {
-        "@lwc/eslint-plugin-lwc": "^1.8.0",
-        "@lwc/jest-preset": "^16.0.0",
-        "@salesforce/eslint-config-lwc": "^3.5.3",
-        "@salesforce/eslint-plugin-lightning": "^1.0.0",
-        "eslint": "^8.57.0",
-        "eslint-plugin-import": "^2.29.1",
-        "eslint-plugin-jest": "^28.2.0",
-        "husky": "^9.0.11",
-        "jest": "^29.7.0",
-        "lint-staged": "^15.2.2",
-        "prettier": "^3.2.5"
-    },
     "engines": {
-        "node": "^20"
+        "node": "^24.8.0"
     },
     "homepage": "https://github.com/developerforce/quiz-player-app",
     "keywords": [
@@ -44,16 +54,6 @@
         ]
     },
     "repository": "pozil/quiz",
-    "scripts": {
-        "start": "MODE=prod node src/server/server.js",
-        "dev": "node src/server/server.js",
-        "lint": "eslint ./src/**/*.js",
-        "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
-        "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
-        "preinstall": "rm -fr src/client/assets/dist",
-        "postinstall": "husky install && mkdir -p src/client/assets/dist && cp node_modules/normalize.css/normalize.css src/client/assets/dist/.",
-        "precommit": "lint-staged"
-    },
     "volta": {
         "node": "20.12.2"
     }
