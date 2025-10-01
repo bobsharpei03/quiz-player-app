@@ -23,7 +23,6 @@
         "jsforce": "^3.10.7",
         "lwc": "^8.22.3",
         "normalize.css": "^8.0.1",
-        "prettier": "^3.6.2",
         "prettier-plugin-apex": "^2.2.6",
         "using": "^1.0.0-alpha-1",
         "ws": "^8.16.0"
