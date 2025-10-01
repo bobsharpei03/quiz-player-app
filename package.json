@@ -36,6 +36,14 @@
         "lwc"
     ],
     "license": "CC0-1.0",
+    "lint-staged": {
+        "**/*.{css,html,js,json,md,yaml,yml}": [
+            "prettier --write"
+        ],
+        "**/modules/**/*.js": [
+            "eslint"
+        ]
+    },
     "repository": "pozil/quiz",
     "volta": {
         "node": "20.12.2"
