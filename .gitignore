@@ -11,6 +11,7 @@ logs
 /dist
 
 # Tooling files
+package-lock.json
 node_modules
 jsconfig.json
 .vscode
