@@ -14,7 +14,7 @@ if (!(SF_USERNAME && SF_PASSWORD && SF_TOKEN && SF_LOGIN_URL)) {
     process.exit(-1);
 }
 
-module.exports = app => {
+module.exports = (app) => {
     app.use(express.json());
 
     // Connect WebSocket
@@ -25,7 +25,7 @@ module.exports = app => {
     const sfdc = new jsforce.Connection({
         loginUrl: SF_LOGIN_URL
     });
-    sfdc.login(SF_USERNAME, SF_PASSWORD + SF_TOKEN, err => {
+    sfdc.login(SF_USERNAME, SF_PASSWORD + SF_TOKEN, (err) => {
         if (err) {
             console.error(err);
             process.exit(-1);
@@ -35,7 +35,7 @@ module.exports = app => {
         // Subscribe to Change Data Capture on Quiz Session record
         sfdc.streaming
             .topic('/data/Quiz_Session__ChangeEvent')
-            .subscribe(event => {
+            .subscribe((event) => {
                 const { Phase__c } = event.payload;
                 // Reformat message and send it to client via WebSocket
                 const message = {
