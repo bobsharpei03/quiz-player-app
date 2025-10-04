@@ -142,6 +142,11 @@ export default class App extends LightningElement {
             });
     }
 
+    resetGame() {
+        clearAllCookies();
+        window.location.reload();
+    }
+
     // UI expressions
 
     get isAuthenticated() {
