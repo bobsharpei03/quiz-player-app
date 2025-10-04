@@ -39,8 +39,8 @@
         "**/*.{css,html,js,json,md,yaml,yml}": [
             "prettier --write"
         ],
-        "**/modules/**/*.js": [
-            "eslint"
+        "*.{js,jsx,ts.tsx}": [
+            "eslint --fix --no-verify"
         ]
     },
     "repository": "pozil/quiz",
