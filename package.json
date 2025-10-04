@@ -8,7 +8,6 @@
     "scripts": {
         "start": "MODE=prod node src/server/server.js",
         "dev": "node src/server/server.js",
-        "lint": "eslint ./src/**/*.js",
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
         "precommit": "lint-staged"
@@ -39,6 +38,9 @@
     "lint-staged": {
         "**/*.{css,html,js,json,md,yaml,yml}": [
             "prettier --write"
+        ],
+        "**/modules/**/*.js": [
+            "eslint"
         ]
     },
     "repository": "pozil/quiz",
