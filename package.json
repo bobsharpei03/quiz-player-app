@@ -39,9 +39,6 @@
     "lint-staged": {
         "**/*.{css,html,js,json,md,yaml,yml}": [
             "prettier --write"
-        ],
-        "**/modules/**/*.js": [
-            "eslint"
         ]
     },
     "repository": "pozil/quiz",
